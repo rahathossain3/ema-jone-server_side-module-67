@@ -21,6 +21,7 @@ async function run() {
         await client.connect();
         const productCollection = client.db('emaJohn').collection('product');
 
+        //get all product
         app.get('/product', async (req, res) => {
             const query = {};
             const cursor = productCollection.find(query);
